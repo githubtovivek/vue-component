@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <div class="container" v-if="servers.length > 0">
         <app-header></app-header>
         <hr>
         <div class="row">
-            <app-server-status></app-server-status>
+            <app-server-status :appServers = "servers"></app-server-status>
             <app-server-Details></app-server-Details>
         </div>
         <hr>
@@ -23,6 +23,11 @@ export default {
         'app-server-status': ServerStatus,
         'app-footer': Footer,
         'app-server-Details': serverDetails
+    },
+    data: function() {
+        return {
+            servers: ["Google", "Yahoo", "Amazon", "Facebook", "Orkut", "Fedid"]
+        };
     }
 }
 </script>
