@@ -26,7 +26,14 @@ export default {
     },
     data: function() {
         return {
-            servers: ["Google", "Yahoo", "Amazon", "Facebook", "Orkut", "Fedid"]
+            servers: [
+                {id: 1, name:"Google", status: "Normal", details: "google server"},
+                {id: 2, name:"Yahoo", status: "critical", details: "Yahoo server"},
+                {id: 3, name:"Amazon", status: "critical", details: "Amazon server"},
+                {id: 4, name:"Facebook", status: "Normal", details: "Facebook server"},
+                {id: 5, name:"Orkut", status: "unknown", details: "Orkut server"},
+                {id: 6, name:"Fedid", status: "critical", details: "Fedid server"}
+            ]
         };
     }
 }
